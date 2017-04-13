@@ -5,13 +5,15 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProductVersion>9.0.30729</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{51FCE249-1187-46EC-96A6-E507889E700D}</ProjectGuid>
+    <ProjectGuid>{97B010AB-0756-46DC-B75A-7A6C4F6FF28D}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Mono.Reflection.Tests</RootNamespace>
-    <AssemblyName>Mono.Reflection.Tests</AssemblyName>
+    <RootNamespace>Mono.Reflection</RootNamespace>
+    <AssemblyName>Mono.Reflection</AssemblyName>
     <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
+    <SignAssembly>true</SignAssembly>
+    <AssemblyOriginatorKeyFile>mono.snk</AssemblyOriginatorKeyFile>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -21,7 +23,6 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
-    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
@@ -30,38 +31,26 @@
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
-    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="nunit.framework">
-      <HintPath>libs\nunit-2.6.2\nunit.framework.dll</HintPath>
-    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core">
       <RequiredTargetFramework>3.5</RequiredTargetFramework>
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Mono.Reflection\AssemblyInfo.cs" />
-    <Compile Include="Mono.Reflection\BackingFieldResolverTest.cs" />
-    <Compile Include="Mono.Reflection\BaseReflectionTest.cs" />
-    <Compile Include="Mono.Reflection\ImageTest.cs" />
-    <Compile Include="Mono.Reflection\DisassemblerTest.cs" />
-    <Compile Include="Mono.Reflection\Formatter.cs" />
+    <None Include="Mono.Reflection.nuspec" />
+    <None Include="mono.snk" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Mono.Reflection.csproj">
-      <Project>{97B010AB-0756-46DC-B75A-7A6C4F6FF28D}</Project>
-      <Name>Mono.Reflection</Name>
-    </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="target.il" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="target.dll">
-      <LogicalName>target.dll</LogicalName>
-    </EmbeddedResource>
+    <Compile Include="AssemblyInfo.cs" />
+    <Compile Include="BackingFieldResolver.cs" />
+    <Compile Include="ByteBuffer.cs" />
+    <Compile Include="Disassembler.cs" />
+    <Compile Include="ILPattern.cs" />
+    <Compile Include="Image.cs" />
+    <Compile Include="Instruction.cs" />
+    <Compile Include="MethodBodyReader.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
