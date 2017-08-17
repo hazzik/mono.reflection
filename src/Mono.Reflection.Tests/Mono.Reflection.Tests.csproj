@@ -1,16 +1,12 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-      <TargetFrameworks>netstandard2.0;net35</TargetFrameworks>
-      <GenerateAssemblyDescriptionAttribute>false</GenerateAssemblyDescriptionAttribute>
-      <GenerateAssemblyFileVersionAttribute>false</GenerateAssemblyFileVersionAttribute>
-      <GenerateAssemblyCompanyAttribute>false</GenerateAssemblyCompanyAttribute>
-      <GenerateAssemblyCopyrightAttribute>false</GenerateAssemblyCopyrightAttribute>
-      <GenerateAssemblyInformationalVersionAttribute>false</GenerateAssemblyInformationalVersionAttribute>
-      <GenerateAssemblyProductAttribute>false</GenerateAssemblyProductAttribute>
-      <GenerateAssemblyTitleAttribute>false</GenerateAssemblyTitleAttribute>
-      <GenerateAssemblyVersionAttribute>false</GenerateAssemblyVersionAttribute>
-      <GenerateAssemblyConfigurationAttribute>false</GenerateAssemblyConfigurationAttribute>
+    <TargetFrameworks>netstandard2.0;net35</TargetFrameworks>
+    <Version>1.1.1</Version>
+    <AssemblyVersion>1.1.0.0</AssemblyVersion>
+    <Authors>Jb Evain</Authors>
+    <Company>Novell, Inc.</Company>
+    <Copyright>Copyright © Novell, Inc. 2009 - 2010</Copyright>
   </PropertyGroup>
 
   <ItemGroup>
@@ -20,5 +16,4 @@
   <ItemGroup>
     <ProjectReference Include="..\Mono.Reflection\Mono.Reflection.csproj" />
   </ItemGroup>
-
 </Project>
