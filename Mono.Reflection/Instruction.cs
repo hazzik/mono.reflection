@@ -32,7 +32,7 @@ using System.Text;
 
 namespace Mono.Reflection {
 
-	public sealed class Instruction {
+	 sealed class Instruction {
 
 		int offset;
 		OpCode opcode;

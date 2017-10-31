@@ -32,7 +32,7 @@ using System.Reflection;
 
 namespace Mono.Reflection {
 
-	public static class Disassembler {
+	static class Disassembler {
 
 		public static IList<Instruction> GetInstructions (this MethodBase self)
 		{
