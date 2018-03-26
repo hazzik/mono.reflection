@@ -16,4 +16,17 @@
   <ItemGroup>
     <ProjectReference Include="..\Mono.Reflection\Mono.Reflection.csproj" />
   </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="target.dll">
+    <LogicalName>target.dll</LogicalName>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="target.il" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="15.5.0" />
+    <PackageReference Include="NUnit" Version="3.9.0" />
+    <PackageReference Include="NUnit3TestAdapter" Version="3.9.0" />
+  </ItemGroup>
 </Project>
