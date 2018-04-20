@@ -5,3 +5,6 @@ obj
 *.nupkg
 *ReSharper*
 /packages
+.idea/
+.vs/
+.vscode/
