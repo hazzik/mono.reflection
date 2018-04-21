@@ -4,3 +4,7 @@ obj
 *.user
 *.nupkg
 *ReSharper*
+/packages
+.idea/
+.vs/
+.vscode/
