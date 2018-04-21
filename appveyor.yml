@@ -1,0 +1,8 @@
+version: 1.0.{build}
+image: Visual Studio 2017
+build_script:
+- cmd: msbuild /v:q /t:Restore /t:Build /p:Configuration=Release
+test_script:
+- cmd: dotnet test --no-build -c Release src/Mono.Reflection.Tests
+artifacts:
+- path: src/Mono.Reflection/bin/Release/*.nupkg
