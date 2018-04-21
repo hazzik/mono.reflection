@@ -1,13 +1,15 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
-    <TargetFrameworks>netstandard2.0;net35</TargetFrameworks>
+    <TargetFrameworks>netstandard2.0;net35;net40;net45</TargetFrameworks>
     <Version>1.1.1</Version>
     <AssemblyVersion>1.1.0.0</AssemblyVersion>
+    <FileVersion>$(Version)</FileVersion>
     <Authors>Jb Evain</Authors>
     <Company>Novell, Inc.</Company>
+    <PackageId>Mono.Reflection.Core</PackageId>
     <PackageTags>assembly assemblies module modules il cil msil bytecode reflection disassembler</PackageTags>
     <Description>Complement for System.Reflection, including an IL disassembler.</Description>
-    <PackageProjectUrl>http://github.com/jbevain/mono.reflection/</PackageProjectUrl>
+    <PackageProjectUrl>http://github.com/hazzik/mono.reflection/</PackageProjectUrl>
     <PackageLicenseUrl>http://opensource.org/licenses/mit-license.php</PackageLicenseUrl>
     <SignAssembly>true</SignAssembly>
     <AssemblyOriginatorKeyFile>mono.snk</AssemblyOriginatorKeyFile>
